@@ -1,0 +1,11 @@
+.dots{
+
+    max-width: 70px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+
+.big-container{
+  min-height : 100vh;
+}

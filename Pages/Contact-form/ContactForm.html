@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Us | El Qalzem</title>     
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap">       
+<style>    
+body{
+margin: 0;
+background: linear-gradient(0deg, rgba(255,255,255,1) 60%, rgba(255,0,0,1) 100%) no-repeat;    
+padding: 0;
+font-family: 'Changa', sans-serif;        
+}  
+::selection {
+  color: #f2f2f2;
+  background: #FF0000;
+}
+:root{
+    --whone : #fff;
+    --retwo : #FF0000;
+}
+.container{
+position: relative;
+font-weight: 500;    
+min-width: 1100px;
+min-height: 450px;
+display: flex;
+top: 20px;      
+z-index: 1000;    
+}    
+.container .contactform{
+position: relative;
+padding: 70px 50px;
+margin: 0 auto;
+width: calc(100% - 500px);    
+background: var(--whone);
+height: 100%;
+box-shadow:0 50px 50px rgba(0,0,0,0.5);    
+}   
+.container .contactform h2{
+color: var(--retwo);
+text-align: right;
+font-size: 24px;
+font-weight: 500;    
+}    
+.container .contactform .formbox{
+position: relative;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+padding-top: 30px;
+}    
+.container .contactform .formbox .inputbox{
+position: relative;
+margin: 0 0 35px 0;    
+}  
+.container .contactform .formbox .inputbox.w50{
+width: 47%;        
+}    
+.container .contactform .formbox .inputbox.w100{
+width: 100%;        
+}    
+.container .contactform .formbox .inputbox input,
+.container .contactform .formbox .inputbox textarea{
+width: 100% !important;
+padding: 5px 0;
+outline: none;
+font-size: 18px;
+font-weight: 300;
+color: #333;
+resize: none;
+border: none;
+border-bottom: 2px solid #777;    
+}    
+.container .contactform .formbox .inputbox textarea{
+min-height: 120px;        
+}    
+.container .contactform .formbox .inputbox span{
+left: 0;
+position: absolute;
+font-size: 18px;
+font-weight: 500;
+color: #333; 
+transition: 0.5s;    
+pointer-events: none;
+}    
+.container .contactform .formbox .inputbox input:focus ~ span,
+.container .contactform .formbox .inputbox textarea:focus ~ span,
+.container .contactform .formbox .inputbox input:valid ~ span,
+.container .contactform .formbox .inputbox textarea:valid ~ span{
+transform: translateY(-20px);
+font-size: 12px;
+font-weight: 500;
+letter-spacing: 1px;
+color: #2f2f2f;    
+}  
+.container .contactform .formbox .inputbox input[type="submit"]{
+position: relative;
+cursor: pointer;
+background: var(--retwo);
+color: var(--whone);    
+border:none;
+max-width: 150px;    
+padding: 12px;
+border: 1px solid var(--retwo);
+transition: 0.5s;
+letter-spacing: 1px;
+font-family: 'Changa', sans-serif;        
+font-weight: 500;    
+}    
+.container .contactform .formbox .inputbox input[type="submit"]:hover{
+max-width: 160px;
+color: #fff;
+transition: 0.5s;    
+}    
+</style>
+</head>
+<body>
+<div class="container">
+<div class="contactform">
+<h2>ارسل رساله</h2>
+<div class="formbox">
+    
+<div class="inputbox w50">
+<input type="text" name="" required>    
+<span>الاسم الثاني</span>    
+</div>    
+
+<div class="inputbox w50">
+<input type="text" name="" required>    
+<span>الاسم الأول</span>    
+</div>    
+
+<div class="inputbox w50">
+<input type="text" name="" required>    
+<span>رقم الهاتف</span>    
+</div>    
+
+<div class="inputbox w50">
+<input type="text" name="" required>    
+<span>الايميل الخاص بك</span>    
+</div>    
+
+<div class="inputbox w100">
+<textarea name="" required></textarea>    
+<span>اكتب رسالتك هنا</span>    
+</div> 
+    
+<div class="inputbox w100">
+<input type="submit" value="ارسل الرساله">   
+</div> 
+    
+</div>    
+</div>    
+</div>     
+</body>
+</html>    

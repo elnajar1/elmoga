@@ -1,0 +1,449 @@
+body{
+    margin: 0;    
+    background: #2f2f2f;   
+    padding: 0;       
+    font-family: 'Changa', sans-serif;
+    background: url(../../Imgs/Home-Back.jpg);
+    background-size: cover;
+    direction: rtl;
+}
+::-webkit-scrollbar{
+    background: var(--whone);
+    width: 7px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--retwo);
+}
+::selection {
+  color: #f2f2f2;
+  background: #FF0000;
+}
+:root{
+    --whone : #fff;
+    --vdw : #f2f3f7;
+    --retwo : #FF0000;
+    --black : #000;
+    --dw : #f2f2f2;
+    --sg : #32CD32;
+}
+.navbar {
+        position: absolute;
+        display: flex;
+        top: 10px;
+        z-index: 3;
+        margin-right: 20px;
+        min-height: 1vh;
+        background-color: transparent;
+        border-right: 5px solid var(--whone);
+        padding-left: 15px;
+        padding-right: 15px;
+        font-family: 'Changa', sans-serif;
+}
+
+ .navbar ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+.navbar ul li a {
+        line-height: 80px;
+        color: var(--whone);
+        padding: 5px 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: 0.5s;
+}
+.navbar ul li .active {
+        line-height: 80px;
+        padding: 5px 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: 0.5s;
+}
+
+.navbar ul li a:hover{
+    color: var(--retwo);
+    background: var(--whone);
+    transition: 0.4s;
+}
+.backCon{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  opacity: 0.6;    
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 100%);
+}
+.bars{
+    position: absolute;
+    top: 20px;
+    margin-left: 20px;
+    line-height: 40px;
+    left: 0;
+    font-size: 24px;
+    background: var(--whone);
+    color: var(--black);
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    z-index: 3;
+}
+.bars:hover{
+    transition: 0.4s;
+    color: var(--retwo);
+}
+.sideMenu {
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        left: 0;
+        width:485px;
+        top: 80px;
+        overflow: auto;
+        z-index: 4;
+        height: 80vh;
+        margin-left: 10px;
+        background:var(--whone);
+        font-family: 'Changa', sans-serif;
+}
+.sideMenu .options{
+    position: relative;
+    padding: 10px 15px;
+    width:448px;
+    margin: 0 auto;
+    background: var(--dw);
+    border-bottom: 2px solid var(--black);
+}
+.sideMenu .options h3{
+    text-align: right;
+    color: var(--black);
+}
+.sideMenu .options span{
+    text-align: center;
+}
+.sideMenu .options a{
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 2px 2px;
+    display: block;
+    background: var(--black);
+    width: 25px;
+    height: 25px;
+    line-height: 30px;
+    cursor: pointer;
+    text-align: center;
+    border: 2px solid var(--black);
+    color: var(--whone);
+    font-size: 20px;
+}
+.sideMenu .options a:hover{
+    transition: 0.4s;
+    color: var(--black);
+    background: transparent;
+    border: 2px solid var(--black);
+}
+.sideMenu .options i{ 
+    text-align: center;
+}
+.all{
+    
+}
+.choose{
+    position: relative;
+    z-index: 3;
+    top: 150px;
+    right: 50px;
+    padding: 5px 20px 15px 20px;
+    color: var(--black);
+    background: var(--dw);
+    width: 500px;
+    border-bottom: 2px solid var(--black);
+}
+.choose h3{
+    text-align: right;
+    padding: 10px 0 0 10px;
+}
+.choose input[type="radio"]:checked,
+input[type="radio"]:not(:checked) {
+    position: absolute;
+    opacity: 0;
+}
+.choose input[type="radio"]:checked + label,
+input[type="radio"]:not(:checked) + label {
+    position: relative;
+    cursor: pointer;
+    line-height: 20px;
+    display:block;
+    color: #666;
+    padding: 20px 60px;
+}
+.choose input[type="radio"]:checked + label:before,
+input[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: var(--black);
+}
+.choose input[type="radio"]:checked + label:after,
+input[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: var(--retwo);
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.choose input[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+.choose input[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.choose .answers{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+}
+.clickable{
+position:relative;
+z-index: 4;    
+text-decoration: none;
+padding: 10px 45px;
+font-size: 20px;    
+font-family: sans-serif;
+color: #f2f2f2;
+background: #2f2f2f;
+border-radius:25px; 
+top: 50%;
+margin-right: 70%;
+cursor: pointer;
+transition: 0.4s;    
+border: 2px solid #2f2f2f;
+text-transform: uppercase;
+}
+.clickable:hover{
+transition: 0.4s;
+color: #af0303;  
+background: transparent;
+border: 2px solid #2f2f2f;    
+}
+.modal{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 4; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content{
+  background-color:transparent;
+  margin: auto;
+  padding: 20px;
+  border:0;
+  width: 80%;
+}
+.editOne{
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    top: 130px;
+    margin-left: 40px;
+    padding: 15px 25px 15px 25px;
+    border-radius: 25px;
+    background: var(--vdw);
+}
+.editOne .close{
+    position: absolute;
+    top: 0;
+}
+.editOne .close a{
+    text-align: right;
+    color: var(--black);
+    font-size: 20px;
+    padding: 2px 2px 2px 2px;
+}
+.editOne .close a:hover i{
+    transition: 0.4s;
+    color: var(--retwo);
+    transform: scale(0.98);
+}
+.editOne h3{
+    text-align: center;
+    color: var(--black);
+}
+.editOne .save{
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0px;
+    color: var(--black);
+    border-radius: 25px;
+    box-shadow: -2px -2px 8px rgba(255,255,255,1), -2px -2px 12px rgba(255,255,255,0.5), 
+                inset 2px 2px 4px rgba(255,255,255,0.1), 2px 2px 8px rgba(0,0,0,0.15);
+}
+.editOne .save:hover{
+    transition: 0.4s;
+    box-shadow: inset -2px -2px 8px rgba(255,255,255,1), inset -2px -2px 12px rgba(255,255,255,0.5), 
+                inset 2px 2px 4px rgba(255,255,255,0.1), inset 2px 2px 8px rgba(0,0,0,0.15);
+}
+.editOne .save:hover span{
+    transition: 0.4s;
+    display: inline-block;
+    transform: scale(0.98);
+}
+.editOne .delete{
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0px;
+    color: var(--retwo);
+    border-radius: 25px;
+    box-shadow: -2px -2px 8px rgba(255,255,255,1), -2px -2px 12px rgba(255,255,255,0.5), 
+                inset 2px 2px 4px rgba(255,255,255,0.1), 2px 2px 8px rgba(0,0,0,0.15);
+}
+.editOne .delete:hover{
+    transition: 0.4s;
+    box-shadow: inset -2px -2px 8px rgba(255,255,255,1), inset -2px -2px 12px rgba(255,255,255,0.5), 
+                inset 2px 2px 4px rgba(255,255,255,0.1), inset 2px 2px 8px rgba(0,0,0,0.15);
+}
+.delete:hover span{
+    transition: 0.4s;
+    display: inline-block;
+    transform: scale(0.98);
+}
+.editOne .q{  
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: 200px;
+    height: 25px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight:500;
+    outline: none;
+    border: none;
+    padding: 5px 15px;
+    background:#ebecf0;
+    color: #8a92a5;
+    margin-bottom: 10px;
+    font-family: 'Changa', sans-serif;
+    box-shadow:inset -4px -4px 8px rgb(255, 255, 255),
+    inset 4px 4px 8px rgba(121, 130, 160, 0.747);
+
+}
+.editOne .n{  
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: 100px;
+    height: 25px;
+    border-radius: 50px;
+    font-size: 10px;
+    font-weight:500;
+    outline: none;
+    border: none;
+    padding: 5px 15px;
+    background:#ebecf0;
+    color: #8a92a5;
+    margin-bottom: 10px;
+    font-family: 'Changa', sans-serif;
+    box-shadow:inset -4px -4px 8px rgb(255, 255, 255),
+    inset 4px 4px 8px rgba(121, 130, 160, 0.747);
+
+}
+.editOne .ta .block{
+    display: block;
+}
+.editOne .ta input{  
+    text-align: center;
+    width: 200px;
+    height: 25px;
+    border-radius: 50px;
+    font-size: 10px;
+    font-weight:500;
+    outline: none;
+    border: none;
+    padding: 5px 15px;
+    background:#ebecf0;
+    color: #8a92a5;
+    margin-bottom: 10px;
+    font-family: 'Changa', sans-serif;
+    box-shadow:inset -4px -4px 8px rgb(255, 255, 255),
+    inset 4px 4px 8px rgba(121, 130, 160, 0.747);
+}
+.editOne .togglebx
+{
+    position: relative;
+    float: left;
+    margin-right: 10px;
+}
+
+
+.editOne .labelt
+ {
+
+ } 
+  
+.editOne .con
+{
+    position: relative;
+    height: 25px;
+    width: 45px;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow:  -4px -4px 8px #ffffff, 4px 4px 12px #9fa3b3;;
+}
+.editOne .switch
+{
+    display: none;
+}
+.toggle
+{
+    height: 100%;
+    width: 60%;
+    background: var(--black);
+    border-radius: 20px;
+    transition: transform 0.4s cubic-bezier(0.85,0.05,0.18,1.35);
+    transform: translate3d(-75%,0,0);
+    box-shadow: 
+        -4px -4px 8px #ffffff,
+        4px 4px 8px  #d1d9e6;
+}
+.switch:checked ~ .toggle
+{
+    transform: translate3d(0%,0,0);
+    background-color: var(--sg);
+}

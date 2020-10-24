@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>صفحة الانشاء | اسم الموقع</title>   
+<link rel="stylesheet" href="../../Plugins/font-awesome-4.7.0/css/font-awesome.min.css">  
+<script src="../../Plugins/jquery.js"></script> 
+<link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap">         <style>
+    
+body{
+    margin: 0;    
+    background: #2f2f2f;   
+    padding: 0;       
+    font-family: 'Changa', sans-serif;
+    background: url(../../Imgs/Home-Back.jpg);
+    background-size: cover;
+    direction: rtl;
+}
+::-webkit-scrollbar{
+    background: var(--whone);
+    width: 7px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--retwo);
+}
+::selection {
+  color: #f2f2f2;
+  background: #FF0000;
+}
+:root{
+    --whone : #fff;
+    --vdw : #f2f3f7;
+    --retwo : #FF0000;
+    --black : #000;
+    --dw : #f2f2f2;
+    --sg : #32CD32;
+    --value: 40%;
+    --back-color: #EBECF0;
+}
+.navbar {
+        position: absolute;
+        display: flex;
+        top: 10px;
+        z-index: 3;
+        margin-right: 20px;
+        min-height: 1vh;
+        background-color: transparent;
+        border-right: 5px solid var(--whone);
+        padding-left: 15px;
+        padding-right: 15px;
+        font-family: 'Changa', sans-serif;
+}
+
+ .navbar ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+.navbar ul li a {
+        line-height: 80px;
+        color: var(--whone);
+        padding: 5px 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: 0.5s;
+}
+.navbar ul li .active {
+        line-height: 80px;
+        padding: 5px 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: 0.5s;
+}
+
+.navbar ul li a:hover{
+    color: var(--retwo);
+    background: var(--whone);
+    transition: 0.4s;
+}
+.backCon{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  opacity: 0.6;    
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 100%);
+}
+.clickable{
+position:relative;    
+z-index: 4;    
+text-decoration: none;
+padding: 10px 45px;
+font-size: 20px;    
+font-family: sans-serif;
+color: #f2f2f2;
+background: #2f2f2f;
+border-radius:25px; 
+margin-right: 40%;    
+cursor: pointer;
+transition: 0.4s;    
+border: 2px solid #2f2f2f;
+text-transform: uppercase;
+}
+.clickable:hover{
+transition: 0.4s;
+color: #af0303;  
+background: transparent;
+border: 2px solid #2f2f2f;    
+}
+.modal{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 4; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content{
+  background-color:transparent;
+  margin: auto;
+  padding: 20px;
+  border:0;
+  width: 80%;
+}    
+.textEdit{
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    top: 130px;
+    margin-left: 40px;
+    padding: 15px 25px 15px 25px;
+    border-radius: 25px;
+    background: var(--vdw);
+}  
+.textEdit .close{
+    position: absolute;
+    top: 0;
+}
+.textEdit .close a{
+    text-align: right;
+    color: var(--black);
+    font-size: 20px;
+    padding: 2px 2px 2px 2px;
+}
+.textEdit .close a:hover i{
+    transition: 0.4s;
+    color: var(--retwo);
+    transform: scale(0.98);
+}    
+.textEdit h3{
+    text-align: center;
+    color: var(--black);
+}
+.textEdit input[type="text"]{
+    display: block;
+    text-align: center;
+    width: 300px;
+    height: 25px;
+    border-radius: 50px;
+    font-size: 10px;
+    font-weight:500;
+    outline: none;
+    border: none;
+    padding: 5px 15px;
+    background:#ebecf0;
+    color: #8a92a5;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-family: 'Changa', sans-serif;
+    box-shadow:inset -4px -4px 8px rgb(255, 255, 255),
+    inset 4px 4px 8px rgba(121, 130, 160, 0.747);
+} 
+.textEdit .textAlign{
+  display: block;
+  text-align: center;
+  padding-bottom: 55px;
+}    
+.textEdit .textAlign .NPB{
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+  margin-left: 14px;
+  box-shadow:-2px -2px 6px rgb(255, 255, 255),
+    2px 2px 6px rgba(121, 130, 160, 0.747);
+    font-size: 18px;
+    color: #8a92a5;
+}     
+.textEdit .textAlign .NPB:active{
+  box-shadow:inset -2px -2px 6px rgb(255, 255, 255),
+    inset 2px 2px 6px rgba(121, 130, 160, 0.747);
+    color: var(--retwo);
+}    
+.neumorphic-slider
+{
+  position: relative;
+  display: block;
+  z-index: 4;
+  left: 0;
+  right: 0;     
+  text-align: center;
+}
+.neumorphic-slider {
+  width: 100px;
+  margin: 0 auto;
+}
+
+.neumorphic-slider__back {
+  height: 23px;
+  background-color: var(--back-color);
+  border-radius: 50px;
+  box-shadow: -4px -4px 12px rgb(255, 255, 255), 4px 4px 12px rgba(121, 130, 160, 0.747);
+
+}
+
+.neumorphic-slider {
+  width: 300px;
+  position: absolute;
+  direction: ltr;
+}
+
+.neumorphic-slider__back {
+  width: calc(100% + 20px);
+}
+
+
+.neumorphic-slider__line {
+  height: 16px;
+  background: linear-gradient(to right, var(--retwo), #30CFD0);
+  margin-top: -20px;
+  margin-left: 5px;
+  border-radius: 8px;
+  opacity: 1;
+  width: calc(var(--value) + 4px);
+}
+
+.neumorphic-slider__thumb {
+  box-shadow: 7px 7px 15px rgba(55, 84, 170, .15), 0px 0px 15px rgba(55, 84, 170, .3);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--back-color);
+  left: var(--value);
+  top: 1px;
+  margin-left: -10px;
+  cursor: pointer;
+}
+
+.neumorphic-slider__popover {
+  position: absolute;
+  background-color: var(--back-color);
+  left: var(--value);
+  font-weight: 600;
+  width: 60px;
+  height: 35px;
+  top: -50px;
+  margin-left: -30px;
+  box-shadow:-2px -2px 6px rgb(255, 255, 255),
+   2px 2px 6px rgba(121, 130, 160, 0.747);    
+  color: #6D7587;    
+  padding: 8px 0;
+  text-align: center;
+
+}
+
+.neumorphic-slider__popover::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: -6px;
+  left: 50%;
+  margin-left: -6px;
+  border-style: solid;
+  border-width: 6px 6px 0 6px;
+  border-color: var(--back-color) transparent transparent transparent;
+}
+.finalButtons{
+padding-top: 55px;        
+}
+.textEdit .save{
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0px;
+    margin: 0 auto;
+    color: var(--black);
+    border-radius: 25px;
+    box-shadow: -2px -2px 8px rgba(255,255,255,1), -2px -2px 12px rgba(255,255,255,0.5), 
+                inset 2px 2px 4px rgba(255,255,255,0.1), 2px 2px 8px rgba(0,0,0,0.15);
+}
+.textEdit .save:hover{
+    transition: 0.4s;
+    box-shadow: inset -2px -2px 8px rgba(255,255,255,1), inset -2px -2px 12px rgba(255,255,255,0.5), 
+                inset 2px 2px 4px rgba(255,255,255,0.1), inset 2px 2px 8px rgba(0,0,0,0.15);
+}
+.textEdit .save:hover span{
+    transition: 0.4s;
+    display: inline-block;
+    transform: scale(0.98);
+}
+.textEdit .delete{
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0px;
+    color: var(--retwo);
+    border-radius: 25px;
+    box-shadow: -2px -2px 8px rgba(255,255,255,1), -2px -2px 12px rgba(255,255,255,0.5), 
+                inset 2px 2px 4px rgba(255,255,255,0.1), 2px 2px 8px rgba(0,0,0,0.15);
+}
+.textEdit .delete:hover{
+    transition: 0.4s;
+    box-shadow: inset -2px -2px 8px rgba(255,255,255,1), inset -2px -2px 12px rgba(255,255,255,0.5), 
+                inset 2px 2px 4px rgba(255,255,255,0.1), inset 2px 2px 8px rgba(0,0,0,0.15);
+}
+.textEdit .delete:hover span{
+    transition: 0.4s;
+    display: inline-block;
+    transform: scale(0.98);
+}     
+</style>      
+</head>    
+<body>
+    
+<!-- Background gradient layer div  -->    
+    
+<div class="backCon"></div>  
+    
+<!-- This Is The Navbar Html Code -->    
+    
+<nav class="navbar">   
+    
+<ul>
+    
+    <li class="p"><a href="#" class="active">الصفحه الرئيسيه</a></li>
+    
+    <li class="p"><a href="#">معلومات عنا</a></li>
+    
+    <li class="p"><a href="#">اصنع اختبارك الآن</a></li>
+    
+</ul>
+    
+</nav> 
+
+<a id="myBtn" class="clickable">clickable</a>    
+    
+<!--The Modal-->
+    
+<div id="myModal" class="modal">
+ 
+<!-- Modal content -->
+    
+<div class="modal-content">
+  
+<!-- here starts the edit div for text tool  -->         
+    
+<div class="textEdit">
+   
+<div class="close"> <a href="#" id="close"> <i class="fa fa-times"> </i> </a> </div>    
+    
+<h3>منطقة تعديل النص</h3>    
+
+<input type="text" placeholder="اكتب هنا النص الذي تريده" class="one">      
+    
+<div class="textAlign">
+    
+<button class="NPB"><i class="fa fa-align-left"></i></button>
+    
+<button class="NPB"><i class="fa fa-align-center"></i></button> 
+    
+<button class="NPB"><i class="fa fa-align-right"></i></button>
+    
+<h3>حجم الخط</h3>  
+
+</div>          
+    
+<div class="neumorphic-slider" onselectstart="return false">
+    
+<div class="neumorphic-slider__back"></div>
+    
+<div class="neumorphic-slider__line"></div>
+    
+<div class="neumorphic-slider__thumb"></div>
+    
+<div class="neumorphic-slider__popover">40%</div>
+    
+</div>            
+    
+<div class="finalButtons">   
+    
+<a class="save" href="#"><span>حفظ التعديلات</span></a>    
+
+<a class="delete" href="#"><span>ازالة العنصر</span></a>     
+    
+</div>    
+    
+</div>        
+    
+<script>
+    
+//progress bar // 
+$('.neumorphic-slider__thumb').on('mousedown', function(){
+  $(document).on('mousemove.mm', function(e){
+    var new_value = 0;
+    if (e.clientX < $('.neumorphic-slider').offset().left) {
+      new_value = '0%';
+    } else if (e.clientX > $('.neumorphic-slider').offset().left + $('.neumorphic-slider').width() - 10) {
+      new_value = '100%';
+    } else {
+      new_value = ((e.clientX - $('.neumorphic-slider').offset().left) / ($('.neumorphic-slider').width() - 10) * 100).toFixed(0) + '%';
+    }
+    document.documentElement.style.setProperty('--value', new_value);
+    $('.neumorphic-slider__popover').text(new_value);
+  });
+  $(document).on('mouseup.mu', function(){
+    $(document).off('mousemove.mm');
+    $('.neumorphic-slider__thumb').off('mouseup.mu');
+  });
+});    
+
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+document.getElementById("myBtn").onclick = function() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+document.getElementById("close").onclick = function() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>    
+    
+</body> 
+</html>    

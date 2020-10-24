@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>صفحة الانشاء | اسم الموقع</title>   
+<link rel="stylesheet" href="../../Plugins/font-awesome-4.7.0/css/font-awesome.min.css">  
+<script src="../../Plugins/jquery.js"></script> 
+<link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap">  
+<style>
+    
+body{
+    margin: 0;    
+    background: #2f2f2f;   
+    padding: 0;       
+    font-family: 'Changa', sans-serif;
+    background: url(../../Imgs/Home-Back.jpg);
+    background-size: cover;
+    direction: rtl;
+}
+::-webkit-scrollbar{
+    background: var(--whone);
+    width: 7px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--retwo);
+}
+::selection {
+  color: #f2f2f2;
+  background: #FF0000;
+}
+:root{
+    --whone : #fff;
+    --vdw : #f2f3f7;
+    --retwo : #FF0000;
+    --black : #000;
+    --dw : #f2f2f2;
+    --sg : #32CD32;
+    --value: 40%;
+    --back-color: #EBECF0;
+}
+.navbar {
+        position: absolute;
+        display: flex;
+        top: 10px;
+        z-index: 3;
+        margin-right: 20px;
+        min-height: 1vh;
+        background-color: transparent;
+        border-right: 5px solid var(--whone);
+        padding-left: 15px;
+        padding-right: 15px;
+        font-family: 'Changa', sans-serif;
+}
+
+ .navbar ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+.navbar ul li a {
+        line-height: 80px;
+        color: var(--whone);
+        padding: 5px 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: 0.5s;
+}
+.navbar ul li .active {
+        line-height: 80px;
+        padding: 5px 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: 0.5s;
+}
+
+.navbar ul li a:hover{
+    color: var(--retwo);
+    background: var(--whone);
+    transition: 0.4s;
+}
+.backCon{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  opacity: 0.6;    
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 100%);
+}
+.clickable{
+position:relative;    
+z-index: 4;    
+text-decoration: none;
+padding: 10px 45px;
+font-size: 20px;    
+font-family: sans-serif;
+color: #f2f2f2;
+background: #2f2f2f;
+border-radius:25px; 
+margin-right: 40%;    
+cursor: pointer;
+transition: 0.4s;    
+border: 2px solid #2f2f2f;
+text-transform: uppercase;
+}
+.clickable:hover{
+transition: 0.4s;
+color: #af0303;  
+background: transparent;
+border: 2px solid #2f2f2f;    
+}
+.modal{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 4; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content{
+  background-color:transparent;
+  margin: auto;
+  padding: 20px;
+  border:0;
+  width: 80%;
+} 
+.submitEdit{
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    top: 130px;
+    margin-left: 40px;
+    padding: 15px 25px 15px 25px;
+    border-radius: 25px;
+    background: var(--vdw);
+}  
+.submitEdit .close{
+    position: absolute;
+    top: 0;
+}
+.submitEdit .close a{
+    text-align: right;
+    color: var(--black);
+    font-size: 20px;
+    padding: 2px 2px 2px 2px;
+}
+.submitEdit .close a:hover i{
+    transition: 0.4s;
+    color: var(--retwo);
+    transform: scale(0.98);
+}    
+.submitEdit h3{
+    text-align: center;
+    color: var(--black);
+}
+.white{
+display: none;    
+position: relative;
+padding: 50px 50px 50px 50px;
+background: var(--dw);
+z-index: 4;
+width: 200px;
+height: 200px;    
+margin: 0 auto;
+top: 100px;    
+}     
+input[type="submit"]{
+position: relative;
+z-index: 4;
+padding: 8px 60px 8px 60px;
+border:0;
+background: var(--retwo);
+font-size: 20px;
+font-family: 'Changa', sans-serif; 
+color: var(--dw);
+cursor: pointer;
+text-align: center;
+border: 2px solid var(--retwo);    
+top: 50%;
+left: 30%;
+transform: translate(-50%, -50%);
+}   
+input[type="submit"]:hover{
+transition: 0.4s;
+background: transparent;
+border: 2px solid var(--retwo);
+color: var(--retwo);    
+}    
+</style>
+</head>     
+<body>
+    
+ <!-- Background gradient layer div  -->    
+    
+<div class="backCon"></div>  
+    
+<!-- This Is The Navbar Html Code -->    
+    
+<nav class="navbar">   
+    
+<ul>
+    
+    <li class="p"><a href="#" class="active">الصفحه الرئيسيه</a></li>
+    
+    <li class="p"><a href="#">معلومات عنا</a></li>
+    
+    <li class="p"><a href="#">اصنع اختبارك الآن</a></li>
+    
+</ul>
+    
+</nav> 
+
+<a id="myBtn" class="clickable">clickable</a>    
+    
+
+    
+<!--The Modal-->
+    
+<!--<div id="myModal" class="modal">-->
+ 
+<!-- Modal content --> 
+    
+<!--<div class="modal-content">-->
+  
+<!-- here starts the edit div for text tool  -->    
+    
+    
+    
+ <div class="submitEdit">
+    
+<div class="close"> <a href="#" id="close"> <i class="fa fa-times"> </i> </a> </div>
+     
+<h3>تعديل زر التأكيد</h3>     
+    
+</div>   
+    
+<!--</div>-->
+    
+<!--</div>-->    
+  
+<div class="white">    
+    
+<input type="submit" value="تأكيد">    
+    
+</div>    
+  
+<script>
+    
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+document.getElementById("myBtn").onclick = function() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+document.getElementById("close").onclick = function() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+</script>    
+    
+</body>    
+</html>   

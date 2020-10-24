@@ -1,0 +1,25 @@
+- Bism Allah elRahman elRahiim - 
+
+
+---------------
+| For Mahmoud |
+---------------
+//Advantage 
+
+//recommendations
+
+
+-------------
+| For Ahmed |
+-------------
+//Advantage ( Alahom barek )
+	- Amazing UI and css 
+	- very Good folders structure
+
+
+//recommendations
+	- Dont alote of ( position: absolute; ) this make small changes make big errors
+	- use bootstrap ( To make a more organized code & support phones )
+	- Organize code arangemente ( by TAB button )
+	- lean to use abslute root like ( /elmoga/pages/home.css ) not ( home.css )
+	- Github rathar than mediafir ( to organize team work)
