@@ -40,11 +40,14 @@
     	 <!-- animate.css -->
     	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
 
+   		<!-- main.css -->
 		<link rel="stylesheet" href="/elmoga/layout/css/main.css?v=5">
 
+		<!-- google font -->
 		<link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap">    
 		<link rel="stylesheet" href="/elmoga/Home.css">   
-		
+		<link rel="stylesheet" type="text/css" href="https://www.fontstatic.com/f=cocon-next-arabic" />
+
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
 		

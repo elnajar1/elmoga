@@ -4,6 +4,8 @@
 
 ?>
 <link rel="stylesheet" href="/elmoga/Pages/Create_Now/CN.css"> 
+<link rel="stylesheet" href="/elmoga/Tools/choose.css">       
+    
 
 <!-- Background gradient layer div  -->    
     
@@ -17,7 +19,7 @@
 
 	<div class="top">    
 	    
-		<button href="#" class=".add_question" onclick="toggle_open()"> 
+		<button href="#" onclick="toggle_open()" style="color: black"> 
 			أضف سؤال 
 		</button>    
 		    
@@ -25,35 +27,10 @@
 	    
 </div>    
 
-<!-- Here is thequestion_editor_container -->
-<div class="question_editor_container">
-	
-</div>    
-<!-- /Here is the question_editor_container  -->
-
 <!-- Here is the Burger Menu  --> 
     
 <nav class="sideMenu" id="side">   
     
-	<div class="options">
-	    
-		<h3>اضافة خانة الاسم</h3>    
-		    
-		<span>يستخدم الطالب هذه الاداه في ان يكتب فيها اسمه اثناء الاختبار</span>
-		    
-		<a><i class="fa fa-plus"></i></a>    
-		    
-		</div>     
-	    
-	<div class="options">
-	    
-		<h3>اضافة نص كتابي</h3>    
-		    
-		<span>يستخدم المعلم هذه الاداه في كتابة ملحوظه او اي شئ آخر في صفحة الاختبار</span>
-		    
-		<a><i class="fa fa-plus"></i></a>    
-		    
-		</div> 
 
 	<div class="options">
 	    
@@ -61,19 +38,13 @@
 		    
 		<span>هذه هي محور الثانويه العامه كلها .. سؤال الاختياري</span>
 		    
-		<button class="add_chose"><i class="fa fa-plus"></i></button>    
+		<button id="myBtn" class="clickable"><i class="fa fa-plus">
+			 أضف 
+		</button>   
 		    
 	</div>    
 	    
-	<div class="options">
-	    
-		<h3>اضافة زر التأكيد</h3>    
-		    
-		<span>بعد انتهاء الطالب من حل الاختبار يضغط علي زر التأكيد حتي يتم تصحيح الاختبار وارسال الدرجات للمعلم</span>
-		    
-		<a><i class="fa fa-plus"></i></a>    
-		    
-	</div> 
+
 
 </nav>    
     
@@ -93,5 +64,5 @@ function toggle_open() {
 <?php
 
 	include_once $_SERVER['DOCUMENT_ROOT'] . '/elmoga/includes/footer.php';
-
+	include_once $_SERVER['DOCUMENT_ROOT'] . '/elmoga/Tools/chose.php';
 ?>

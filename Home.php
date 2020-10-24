@@ -21,7 +21,7 @@
 <div class="buttons">
     
 
-<a href="Pages/Create_Now/CN.html">انشئ الآن</a> 
+<a href="Pages/Create_Now/CN.php">انشئ الآن</a> 
 
 <a href="Pages/Contact-form/ContactForm.html">تواصل معنا</a>
         
