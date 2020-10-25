@@ -45,7 +45,6 @@
 
 		<!-- google font -->
 		<link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap">    
-		<link rel="stylesheet" href="/elmoga/Home.css">   
 		<link rel="stylesheet" type="text/css" href="https://www.fontstatic.com/f=cocon-next-arabic" />
 
 		<!-- Latest compiled and minified CSS -->
@@ -59,25 +58,7 @@
 
 	<body>
 
-		<div id = "safety-app"><!-- make it vue app -->
-
-		<!-- This Is The Navbar Html Code -->    
-		    
-		<nav>   
-		    
-			<ul>
-			    
-			    <li class="p"><a href="#" class="active">الصفحه الرئيسيه</a></li>
-			    
-			    <li class="p"><a href="#">معلومات عنا</a></li>
-			    
-			    <li class="p"><a href="Pages/Create-Now/CN.html">اصنع اختبارك الآن</a></li>
-			    
-			</ul>
-		    
-		</nav>    
-
-	
-
-
-			
+	<nav>
+		شريط التنقل هنا 
+	</nav>
+	<hr>

@@ -3,6 +3,7 @@
 	include_once $_SERVER['DOCUMENT_ROOT'] . '/elmoga/includes/header.php';
 
 ?>
+<link rel="stylesheet" href="/elmoga/Home.css">   
 
 <!-- Background gradient layer div  -->    
     
@@ -21,7 +22,7 @@
 <div class="buttons">
     
 
-<a href="Pages/Create_Now/CN.php">انشئ الآن</a> 
+<a href="Pages/Create/">انشئ الآن</a> 
 
 <a href="Pages/Contact-form/ContactForm.html">تواصل معنا</a>
         

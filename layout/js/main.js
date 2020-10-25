@@ -1,4 +1,4 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
 
 	//add_chose
 	$('.add_chose' ).click(function(e){
@@ -20,3 +20,4 @@ $(document).ready(function(){
 		return false ;
 	});
 });
+*/
